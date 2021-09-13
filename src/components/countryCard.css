@@ -1,0 +1,28 @@
+.cardDvi {
+    border: 1px solid #efefef;
+    border-radius: 5px;
+    width: 20%;
+    padding: 30px;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
+    text-align: center;
+}
+
+.countryName {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: #444941;
+}
+
+.countryFlag {
+    width: 40%;
+    height: 40%;
+    margin-bottom: 20px;
+}
+
+.more {
+    color: #7FC8A9;
+    cursor: pointer;
+    text-decoration: none;
+}

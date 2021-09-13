@@ -1,0 +1,80 @@
+:root {
+    --button: #7FC8A9;
+    --subtitle: #D5EEBB;
+    --other: #5F7A61;
+    --background: #f6f6f6;
+    --title: #444941;
+}
+
+.searchCountryDiv {
+    flex: 2;
+    border: 1px solid #efefef;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
+    height: 680px;
+    position: sticky;
+    top: 0;
+}
+
+.countryWrapper {
+    padding: 10px;
+    text-align: center;
+}
+
+.searchTitle {
+    margin-top: 50px;
+    color: var(--title);
+    margin-bottom: 10px;
+}
+
+.searchSubtitle {
+    color: var(--subtitle);
+    font-size: 18px;
+}
+
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.searchLabel {
+    color: var(--subtitle);
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.searchInput {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px 20px;
+    background-color: var(--background);
+    width: 60%;
+    color: black;
+    text-align: center;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
+}
+
+.or {
+    color: var(--subtitle);
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+.displayAll {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button);
+    padding: 7px 12px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.displayAll:hover {
+    background-color: black;
+}

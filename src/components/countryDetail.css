@@ -1,0 +1,105 @@
+.detailWrapper {
+    margin-top: 10px;
+    padding: 20px 100px;
+}
+
+.home {
+    text-decoration: none;
+    color: #D5EEBB;
+    font-size: 12px;
+    text-align: center;
+}
+
+.detailCard {
+    border: solid 1px #efefef;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
+    margin-top: 20px;
+}
+
+.headerDetail {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.headerText {
+    color: #444941;
+}
+
+.footerDetail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.footerText {
+    color: #D5EEBB;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+span {
+    color: #5F7A61;
+}
+
+.borderDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.borders {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.borderName {
+    color: #D5EEBB;
+    background-color: #5F7A61;
+    padding: 5px 8px;
+    border-radius: 4px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+.covid {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 14px;
+    color: white;
+    background-color: #7FC8A9;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: ease 0.5s;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.covid:hover {
+    background-color: black;
+}
+
+.covidCardDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+@media screen and (max-width: 480px) {
+    .detailWrapper {
+        padding: 0;
+    }
+}

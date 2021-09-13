@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.countryMainDiv {
+    display: flex;
+}
+
+@media screen and (max-width: 480px) {
+    .countryMainDiv {
+        flex-direction: column;
+    }
+}

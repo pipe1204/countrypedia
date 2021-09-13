@@ -1,0 +1,73 @@
+.mainDiv {
+    flex: 4;
+    background-color: #f6f6f6;
+}
+
+.allCountriesDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.divButton {
+    text-align: center;
+    margin-top: 20px;
+    position: sticky;
+    top: 0;
+    margin-bottom: 50px;
+}
+
+.displayAll {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button);
+    padding: 7px 12px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+    margin-right: 10px;
+    width: 20%;
+}
+
+.displayAll:hover {
+    background-color: black;
+}
+
+.clearAll {
+    border: none;
+    border-radius: 5px;
+    background-color: #D5EEBB;
+    padding: 7px 12px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+    margin-left: 10px;
+    width: 20%;
+}
+
+.clearAll:hover {
+    background-color: blanchedalmond;
+}
+
+@media  screen and (min-width: 480px) {
+
+    .mainDiv {
+        background-color: white;
+    }
+
+    .divButton {
+        margin-top: 50px;
+    }
+
+    .displayAll {
+        width: 30%;
+    }
+
+    .clearAll {
+        width: 30%;
+    }
+    
+}

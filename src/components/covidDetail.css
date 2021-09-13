@@ -1,0 +1,46 @@
+.covidCard {
+    border: solid 1px #efefef;
+    border-radius: 5px;
+    background-color: #f6f6f6;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
+    width: 40%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px 20px;
+}
+
+.dataDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dataHeaderCovid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.province {
+    color: #444941;
+}
+
+.dataFooterCovid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.infoHeading {
+    color: #5F7A61;
+    margin-bottom: 10px;
+}
+
+.dataHeading {
+    background-color: #444941;
+    color: #D5EEBB;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
