@@ -9,8 +9,8 @@ const SearchCountry = () => {
 
     return (
         <>
-        <SearchForm />
-        <Countries />
+            <SearchForm />
+            <Countries />
         </>
     )
 }

@@ -15,23 +15,24 @@ const SearchForm = () => {
     const fetchCountryData = () => {
 
         setLoading(true)
-                setTimeout( 
-                        async()=> {
-                            try {
-                                const response = await fetch(`https://restcountries.eu/rest/v2/name/${countryName}`)
-                                const result = await response.json()
-                                if (result.status) {
-                                    setError(true)
-                                    setLoading(false)
-                                } else {
-                                    setData(result)
-                                }
-                            } catch (error) {
-                            }
+            setTimeout( 
+                async()=> {
+                    try {
+                        const response = await fetch(`https://restcountries.eu/rest/v2/name/${countryName}`)
+                        const result = await response.json()
+                        if (result.status) {
+                            setError(true)
                             setLoading(false)
-                            },1000)
-                            setCountryName("")
-                            setError(false)
+                        } else {
+                                setData(result)
+                            }
+                    } catch (error) {
+                        console.log(error)
+                        }
+                setLoading(false)
+            },1000)
+        setCountryName("")
+        setError(false)
     }
 
     return (

@@ -8,25 +8,38 @@ import CovidDetail from './CovidDetail'
 
 const CountryDetail = () => {
 
-    const countryData = useParams()
+    const { name } = useParams()
     const [singleCountryDetail, setSingleCountryDetail] = useState([])
     const [load, setLoad] = useState(false)
     const [covidData, setCovidData] = useState([])
+    const [error, setError] = useState(false)
 
+    //Functions
+
+    //Fetch Country data Function
     const fetchSingleCountry = async() => {
 
-        const response = await fetch(`https://restcountries.eu/rest/v2/name/${countryData.name}`)
-        const results = await response.json()
-        setSingleCountryDetail(results[0])
-        setLoad(true)
+        try {
+            const response = await fetch(`https://restcountries.eu/rest/v2/name/${name}`)
+            const results = await response.json()
+        
+            if (results.status) {
+                setError(true)
+            } else {
+                setSingleCountryDetail(results[0])
+                setLoad(true)
+                setError(false)
+            }
+        } catch (error) {
+            
+        }
     }
 
     useEffect(() => {
         fetchSingleCountry()
-        setCovidData([])
-    },[countryData])
+    },[name])
 
-
+    //Fetch Covid Function
     const fetchCovidData = async() => {
 
         const response = await fetch(`https://api.covid19api.com/live/country/${singleCountryDetail.name}`)
@@ -34,7 +47,6 @@ const CountryDetail = () => {
         const shortList = results.slice(0, 8)
         console.log(shortList)
         setCovidData(shortList)
-        console.log(shortList)
         setLoad(true)
     }
 
@@ -42,6 +54,9 @@ const CountryDetail = () => {
         <>
         <div className="mainDiv">
             <div className="detailWrapper">
+                {
+                    error ? <h2 className="notFound">Not Found. Please try again</h2> :
+                <>
                 <Link to="/" className="home"><h2>⬅️ Back Home</h2></Link>
                 <div className="detailCard">
                     <article>
@@ -67,6 +82,7 @@ const CountryDetail = () => {
                                     }
                                 </div>
                             </div>
+                            <Link to={`/weather/${singleCountryDetail.capital}`}><button className="weatherButton">Check the weather in {singleCountryDetail.capital}</button></Link>
                             <button className="covid" onClick={fetchCovidData}>Covid Information</button>
                         </footer>
                     </article> 
@@ -88,6 +104,8 @@ const CountryDetail = () => {
                     }
                 </div>   
                 </div>
+                </>
+                }
             </div>
         </div>
         </>
